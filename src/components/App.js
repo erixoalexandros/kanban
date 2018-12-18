@@ -4,12 +4,15 @@ import './style.css';
 
 class App extends React.Component {
 
+
+
   render() {
+
     return (
-      <div>
-        <TaskList title='To Do'/>
-        <TaskList title='Doing'/>
-        <TaskList title='Done'/>
+      <div className='app'>
+        <TaskList title='TO DO'/>
+        <TaskList title='DOING'/>
+        <TaskList title='DONE'/>
       </div>
     );
   }
