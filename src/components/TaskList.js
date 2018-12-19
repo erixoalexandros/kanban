@@ -3,13 +3,11 @@ import Task from './Task';
 
 const TaskList = ({title}) => {
 
-
   return (
     <div className='task-list'>
       <h1>{title}</h1>
-      <Task />
-      <Task />
-      <Task />
+      <div className='task-list-container'>
+      </div>  
     </div>
   );
 }
