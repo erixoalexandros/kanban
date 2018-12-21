@@ -94,6 +94,7 @@ body {
 
 .task p {
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .task i {

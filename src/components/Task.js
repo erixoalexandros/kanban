@@ -1,20 +1,16 @@
 import React from 'react';
 
-class Task  extends React.Component {
-
-
-
-  render() {
+const Task = ({task}) => {
 
     return (
       <div className='task'>
-        <h2>Title</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <h2>{task.title}</h2>
+        <p>{task.description}</p>
         <i className="fas fa-minus-circle"></i>
         <i className="fas fa-chevron-circle-right"></i>
       </div>
     );
-  }
+
 }
 
 export default Task;

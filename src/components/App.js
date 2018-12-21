@@ -10,14 +10,18 @@ class App extends React.Component {
     doing: [],
     done: []};
 
+  onTaskAdd = (task) => {
+    this.setState({toDo: [...this.state.toDo, task]});
+  }
+
   render() {
 
     return (
       <div className='app'>
-        <AddTask />
-        <TaskList title='TO DO'/>
-        <TaskList title='DOING'/>
-        <TaskList title='DONE'/>
+        <AddTask onTaskAdd={this.onTaskAdd}/>
+        <TaskList title='TO DO' tasks={this.state}/>
+        <TaskList title='DOING' tasks={this.state}/>
+        <TaskList title='DONE' tasks={this.state}/>
       </div>
     );
   }
