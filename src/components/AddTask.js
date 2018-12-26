@@ -2,9 +2,9 @@ import React from 'react';
 
 class AddTask extends React.Component {
 
-  state = {title: '', description: ''};
+  state = {status: 'toDo', title: '', description: ''};
 
-  initializeState = () => this.setState({title: '', description: ''});
+  initializeState = () => this.setState({status: 'toDo', title: '', description: ''});
 
   handleSubmit = (e) => {
     e.preventDefault();

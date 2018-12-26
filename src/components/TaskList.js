@@ -1,27 +1,27 @@
 import React from 'react';
 import Task from './Task';
 
-const TaskList = ({title, tasks}) => {
+const TaskList = ({title, tasks, onTaskRemove, onTaskPromote}) => {
 
-  if (tasks.toDo.length === 0) {
-    return (
-      <div className='task-list'>
-        <h1>{title}</h1>
-        <div className='task-list-container'>
-        </div>  
-      </div>
-    );
-  }
+  let tasksToRender = () => {
 
-  const tasksToRender = tasks.toDo.map((currentTask, i) => {
-    return <Task task={currentTask} key={i}/>;
-  });
+    return tasks.map((currentTask, i) => {
+      return <Task
+                task={currentTask}
+                key={i}
+                index={i}
+                onTaskRemove={onTaskRemove}
+                onTaskPromote={onTaskPromote}
+              />;
+    });
+
+  };
 
   return (
     <div className='task-list'>
       <h1>{title}</h1>
       <div className='task-list-container'>
-        {tasksToRender}
+        {tasksToRender()}
       </div>  
     </div>
   );
