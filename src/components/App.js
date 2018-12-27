@@ -20,14 +20,40 @@ class App extends React.Component {
 
   onTaskPromote = (task, taskIndex) => {
 
-    if (task.status === 'toDo') {
-      this.setState({doing: [...this.state.doing, task]});
-      this.setState({doing: this.state.doing.map((item) => item.status = 'doing')});
-    }
+    let temp = [];
 
-    if (task.status === 'doing') {
-      this.setState({done: [...this.state.done, task]});
-      this.setState({done: this.state.done.map((item) => item.status = 'done')});
+    temp = [...temp, task];
+
+    switch (task.status) {
+
+      case 'toDo':
+        
+          this.setState({toDo: this.state.toDo.filter((item, i) => i !== taskIndex)});
+
+          temp = temp.map(item => {
+            item.status = 'doing'
+            return item;
+          });
+
+          this.setState({doing: [...this.state.doing, ...temp]});
+        
+        break;
+
+      case 'doing':
+
+          this.setState({doing: this.state.doing.filter((item, i) => i !== taskIndex)});
+
+          temp = temp.map(item => {
+            item.status = 'done'
+            return item;
+          });
+
+          this.setState({done: [...this.state.done, ...temp]});
+
+        break;
+    
+      default:
+        break;
     }
     
   }
