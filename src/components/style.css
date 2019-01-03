@@ -19,7 +19,7 @@ body {
 .task-list {
   background-color: #f5f6fa;
   border-radius: 60px;
-  box-shadow: 0px 3px 8px -1px rgba(0,0,0,0.36);
+  box-shadow: 0px 3px 8px -1px rgba(0, 0, 0, 0.36);
   flex: 1;
   height: 90vh;
   margin-right: 50px;
@@ -41,7 +41,7 @@ body {
   border-radius: 10px;
 }
 
-.task-list:nth-child(2){
+.task-list:nth-child(2) {
   border-top: 20px solid #c23616;
 }
 
@@ -61,7 +61,7 @@ body {
   width: 60%;
 }
 
-.task-list:nth-child(2) h1{
+.task-list:nth-child(2) h1 {
   border-bottom-color: #e84118;
   color: #e84118;
 }
@@ -71,7 +71,7 @@ body {
   color: #e1b12c;
 }
 
-.task-list:last-child h1{
+.task-list:last-child h1 {
   border-bottom-color: #44bd32;
   color: #44bd32;
 }
@@ -127,7 +127,7 @@ body {
   background-color: #f5f6fa;
   border-radius: 60px;
   border-top: 20px solid #00a8ff;
-  box-shadow: 0px 3px 8px -1px rgba(0,0,0,0.36);
+  box-shadow: 0px 3px 8px -1px rgba(0, 0, 0, 0.36);
   display: flex;
   flex: 1;
   flex-direction: column;
